@@ -1,5 +1,6 @@
 #header {
   justify-self: center;
+  margin-top: 2rem;
 }
 main section:nth-child(1) {
   --bg: radial-gradient{

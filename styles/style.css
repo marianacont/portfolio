@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Khula');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap');
 @import url(general.css);
 @import url(navigation.css);
 @import url(dist/header.css);
@@ -9,7 +10,7 @@
 
 :root{
     --first: #003A46;
-    --second: #F4B831;
+    --second: rgb(251, 157, 111);
     --light: #E4EAEA;
     --gray: #ccc;
     --dark: #333;
@@ -55,7 +56,9 @@ footer a {
     text-decoration: none;
 }
 
-
+li {
+    list-style: none;
+}
 
 
 
