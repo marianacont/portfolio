@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Khula');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
+@import url(general.css);
+@import url(navigation.css);
+@import url(dist/header.css);
+@import url(about.css);
+
+/* Declaraciones */
+
+:root{
+    --first: #003A46;
+    --second: #F4B831;
+    --light: #E4EAEA;
+    --gray: #ccc;
+    --dark: #333;
+    --danger: #c33;
+    --warning: #FC0;
+    --seccess: #0c3;
+}
+
+
+* {
+    font-family: 'Khula', 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+nav,
+h1, 
+h2,  
+h3,  
+.header,
+main,
+nav {
+    margin: 0;
+}
+
+
+.menu {
+    padding: 0;
+}
+
+
+nav,
+.header,
+.works,
+body {
+    background-color: var(--first);
+    color: #F4F4F4;
+}
+
+
+nav a,
+footer a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.projects img {
+    width: 340px;
+}
+
+.ficha {
+    border: var(--light) 1px solid;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+a .info {
+    color: var(--light);
+}
+
+button .info:hover,
+button .info:visited {
+    color: var(--second);
+}

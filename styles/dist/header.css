@@ -1,0 +1,31 @@
+#header {
+  justify-self: center;
+}
+main section:nth-child(1) {
+  --bg: radial-gradient{
+            circle at top left,
+            hsl(1 * (360/4), 50%, 60%),
+            hsl(1 * (180/4), 50%, 40%)
+        };
+}
+main section:nth-child(2) {
+  --bg: radial-gradient{
+            circle at top left,
+            hsl(2 * (360/4), 50%, 60%),
+            hsl(2 * (180/4), 50%, 40%)
+        };
+}
+main section:nth-child(3) {
+  --bg: radial-gradient{
+            circle at top left,
+            hsl(3 * (360/4), 50%, 60%),
+            hsl(3 * (180/4), 50%, 40%)
+        };
+}
+main section:nth-child(4) {
+  --bg: radial-gradient{
+            circle at top left,
+            hsl(4 * (360/4), 50%, 60%),
+            hsl(4 * (180/4), 50%, 40%)
+        };
+}

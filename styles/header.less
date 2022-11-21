@@ -1,0 +1,55 @@
+// Plugin para VS Sass/Less/Stylus/Plugin/Typescript/Javascript
+
+@color: var(--first);
+@bg: var(--light);
+@gradient: linear-gradient(var(--first), var(--dark));
+@small: 576px;
+
+
+// Nesting - Anidación de selectores y reglas
+
+#header {
+    justify-self: center;
+}
+
+
+main {
+    section {
+        .colors(4);
+        
+    }
+}
+
+// Loops
+
+.loop (@i: 1) when (@i < 10) {
+    width: @1 * 10%;
+    .loop(@1+1);
+
+}
+
+
+// Colores
+
+.colors(@total; @i:1) when (@i<=@total){
+    &:nth-child(@{i}){
+        --bg: radial-gradient{
+            circle at top left,
+            hsl(@i * (360/@total), 50%, 60%),
+            hsl(@i * (180/@total), 50%, 40%)
+        };
+    };
+    .colors(@total, @i+1);
+}
+
+// Galería de imágenes
+@array: ;
+@path:'../img/galeria';
+
+.bg(@array; @i:1) when (@i <= lenght(array)){
+    @img: extract(@array, @i);
+    &:nth-child(@{i}n){
+        --bg: url('@{path}/@{img}');
+    }
+    .bg(@array; @i+1);
+}
