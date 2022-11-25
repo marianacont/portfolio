@@ -1,25 +1,33 @@
-// Plugin para VS Sass/Less/Stylus/Plugin/Typescript/Javascript
 
 @color: var(--first);
 @bg: var(--light);
 @gradient: linear-gradient(var(--first), var(--dark));
 @small: 576px;
+@min: .5rem;
+@mid: 2vw;
+@max: 5rem;
+@m: 1rem;
 
 
-// Nesting - Anidación de selectores y reglas
+
 
 #header {
-    justify-self: center;
-    margin-top: 2rem;
+    .flexbox(@ai: center);
+      .fontsize(@min*2.5, @mid*1.4, @max);
+    width: 80vw;
+    margin: 2rem auto;
 }
 
-
-main {
-    section {
-        .colors(4);
-        
-    }
+.portrait {
+    .responsive-portrait;
 }
+
+.responsive-portrait {
+    width: 100%;
+    max-width: @max *1.5;
+
+}
+
 
 // Loops
 
@@ -44,8 +52,7 @@ main {
 }
 
 // Galería de imágenes
-@array: ;
-@path:'../img/galeria';
+
 
 .bg(@array; @i:1) when (@i <= lenght(array)){
     @img: extract(@array, @i);
@@ -53,4 +60,27 @@ main {
         --bg: url('@{path}/@{img}');
     }
     .bg(@array; @i+1);
+}
+
+
+// Mixings
+
+.flexbox (
+    @fd: row;
+    @jc: center;
+    @ai: stretch;
+    @g: 1rem;
+    @fw: wrap;
+    @d: flex
+){
+    display: @d;
+    flex-direction: @fd;
+    justify-content: @jc;
+    align-items: @ai;
+    flex-wrap: @fw;
+    gap: @g;
+}
+
+.fontsize (@min; @max; @mid){
+    font-size: clamp(@min, @mid, @max);
 }
