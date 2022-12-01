@@ -5,6 +5,10 @@
 @import url(navigation.css);
 @import url(dist/header.css);
 @import url(about.css);
+@import url(main.css);
+@import url(practices.css);
+@import url(gallery.css);
+@import url(login.css);
 
 /* Declaraciones */
 
@@ -60,30 +64,3 @@ li {
     list-style: none;
 }
 
-
-
-
-
-
-
-
-.projects img {
-    width: 340px;
-}
-
-.ficha {
-    border: var(--light) 1px solid;
-    border-radius: .5rem;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-a .info {
-    color: var(--light);
-}
-
-button .info:hover,
-button .info:visited {
-    color: var(--second);
-}

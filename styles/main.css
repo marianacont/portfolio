@@ -1,0 +1,47 @@
+img.logos {
+    max-height: 30px;
+}
+
+.projects {
+    width: 70vw;
+    margin: 50px auto;
+    text-align: center;
+}
+.projects img {
+    width: 340px;
+}
+
+
+.ficha {
+    border: var(--light) 1px solid;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+a.enlace {
+        color: var(--second);
+        font-weight: 600;
+}
+
+a .info {
+    color: var(--light);
+}
+
+button .info:hover,
+button .info:visited {
+    color: var(--second);
+}
+
+.currently {
+    width: 70vw;
+    margin: auto;
+}
+
+.bloc {
+    margin-bottom: 50px;
+}
+
+.book {
+    max-height: 100px;
+}

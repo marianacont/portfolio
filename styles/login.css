@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root{
+    /* Colors */
+--login-first: hsl(244, 75%, 57%);
+--login-second: hsl(249, 64%, 47%);
+--login-title: hsl(244, 12%, 12%);
+--login-text: hsl(244, 4%, 36%);
+--login-body: hsl(208, 97%, 85%);
+/* Typography */
+--login-body-font: 'Rubik', sans-serif;
+--login-h2: 1.25rem;
+--login-small-font: .8rem;
+--login-smaller-font: .7rem;
+--font-regular: 500;
+--font-semi-bold: 600;
+}
+
+@media screen and (min-width: 1024px){
+    :root {
+        --login-h2: 1.75rem;
+        --login-normal-font: 1rem;
+        --login-small-font: .85rem;
+        --login-smaller-font: .75rem;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--login-body);
+    font-family: var(--login-body-font);
+    color: var(--login-text);
+}
+
+input,
+button {
+    font-family: var(--login-body-font);
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+#login {
+    background-color: rgb(151, 26, 26);
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 30px;
+}
+
+.bgWhite{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    background-color: rgb(234, 126, 126);
+}
