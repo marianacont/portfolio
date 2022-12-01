@@ -8,12 +8,12 @@
 @import url(main.css);
 @import url(practices.css);
 @import url(gallery.css);
-@import url(login.css);
+
 
 /* Declaraciones */
 
 :root{
-    --first: #003A46;
+    --first: #062930;
     --second: rgb(251, 157, 111);
     --light: #E4EAEA;
     --gray: #ccc;
