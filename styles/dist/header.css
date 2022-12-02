@@ -5,8 +5,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: clamp(1.25rem, 5rem, 2.6vw);
-  width: 80vw;
+  font-size: clamp(0.5rem, 2vw, 5rem);
+  height: 100vh;
   margin: 2rem auto;
 }
 .portrait {

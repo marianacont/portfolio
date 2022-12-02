@@ -13,8 +13,8 @@
 
 #header {
     .flexbox(@ai: center);
-      .fontsize(@min*2.5, @mid*1.3, @max);
-    width: 80vw;
+    .fontsize(@min; @mid; @max);
+    height: 100vh;
     margin: 2rem auto;
 }
 
@@ -29,38 +29,6 @@
 }
 
 
-// Loops
-
-.loop (@i: 1) when (@i < 10) {
-    width: @1 * 10%;
-    .loop(@1+1);
-
-}
-
-
-// Colores
-
-.colors(@total; @i:1) when (@i<=@total){
-    &:nth-child(@{i}){
-        --bg: radial-gradient{
-            circle at top left,
-            hsl(@i * (360/@total), 50%, 60%),
-            hsl(@i * (180/@total), 50%, 40%)
-        };
-    };
-    .colors(@total, @i+1);
-}
-
-// Galería de imágenes
-
-
-.bg(@array; @i:1) when (@i <= lenght(array)){
-    @img: extract(@array, @i);
-    &:nth-child(@{i}n){
-        --bg: url('@{path}/@{img}');
-    }
-    .bg(@array; @i+1);
-}
 
 
 // Mixings
@@ -81,6 +49,6 @@
     gap: @g;
 }
 
-.fontsize (@min; @max; @mid){
+.fontsize (@min; @mid; @max){
     font-size: clamp(@min, @mid, @max);
 }
