@@ -8,24 +8,51 @@
 @max: 5rem;
 @m: 1rem;
 
+    // Dimensiones
+    @full: calc(100vw - 2rem);
+    @responsive: ~'min(calc(100vw - 660px), 1rem)';
+    @col: 24;
+    // Tamaños de Pantalla
+    @sm: 576px;
+    @md: 768px;
+    @lg: 992px;
+    @xl: 1200px;
+
 
 
 
 #header {
     .flexbox(@ai: center);
-    .fontsize(@min; @mid; @max);
-    height: 100vh;
-    margin: 2rem auto;
+    .position;
+    @media screen and (min-width: @lg){
+        .sizes(@h: 100vh);
+}
 }
 
-.portrait {
-    .responsive-portrait;
+.header{
+    .normalize(@p: 1rem);
+    .sizes(@max * 8; @h: auto);
+    .fontsize(@min, @max / 2, @mid);
+      h2{
+        color: var(--second);
+        text-shadow: .05rem .05rem .1rem var(--light);
+    }
+    h1 {
+        text-shadow: .1rem .1rem .1rem var(--second);
+    }
 }
 
-.responsive-portrait {
+
+
+.portrait{
+    .normalize(.5rem; .5rem ; .2rem solid var(--second));
+    &:extend(.r-portrait);
+    border-radius: 10%;
+}
+
+.r-portrait {
     width: 100%;
     max-width: @max *1.5;
-
 }
 
 
@@ -49,6 +76,30 @@
     gap: @g;
 }
 
-.fontsize (@min; @mid; @max){
-    font-size: clamp(@min, @mid, @max);
+
+.normalize(@m: 0; @p: 0; @b: 0){
+    margin: @m;
+    border: @b;
+    padding: @p;
+}
+
+.position(@p:relative; @x:0; @y:0; @z:0; @x-axis:left; @y-axis:top){
+    position: @p;
+    @{x-axis}: @x;
+    @{y-axis}: @y;
+    z-index: @z;
+}
+.sizes(@wmax: unset; @hmax: unset; @w: 100%; @h: 100%){
+    max-width: @wmax;
+    max-height: @hmax;
+    width: @w;
+    height: @h;
+}
+.fontsize(@min; @max; @mid){
+    font-size: ~'min(calc(@{mid} + @{min}), calc(@{max}/2))';
+
+}
+
+.r-portrait{
+    .sizes(@max * 2.5; @max * 2.5; @full; @full);
 }
