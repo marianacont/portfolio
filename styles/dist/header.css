@@ -46,6 +46,50 @@
   width: 100%;
   max-width: 7.5rem;
 }
+.skills {
+  text-align: center;
+}
+.skills h3 {
+  border-top: 1px solid var(--second);
+  margin: 0 25vw;
+}
+ul.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 3rem;
+  --fa-animation-duration: 0s;
+  text-shadow: 0.1rem 0.1rem 0.3rem var(--second);
+  margin: 50px;
+}
+ul.skills:hover {
+  --fa-animation-duration: 5s;
+}
+ul.skills li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.icon {
+  --fa-animation-duration: 0s;
+  text-shadow: 0.1rem 0.1rem 0.3rem var(--second);
+}
+.icon:hover {
+  --fa-animation-duration: 5s;
+}
+.icon li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 .r-portrait,
 .portrait {
   max-width: 12.5rem;

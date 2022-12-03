@@ -55,10 +55,32 @@
     max-width: @max *1.5;
 }
 
+.skills {
+    text-align: center;
+}
+.skills h3{
+    border-top: 1px solid var(--second);
+    margin: 0 25vw;
+}
+
+ul.skills {
+    .flexbox(@g:3rem);
+    .icon;
+    margin: 50px;
+}
 
 
 
 // Mixings
+
+.icon {
+    --fa-animation-duration: 0s;
+    text-shadow: .1rem .1rem .3rem var(--second);
+    &:hover{
+        --fa-animation-duration: 5s;}
+        li{
+            .flexbox(@fd:column; @ai:center);}
+}
 
 .flexbox (
     @fd: row;
