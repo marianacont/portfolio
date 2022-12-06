@@ -22,7 +22,7 @@
 
 
 #header {
-    .flexbox(@ai: center);
+    .flexbox(@ai: center, @g:2rem);
     .position;
     @media screen and (min-width: @lg){
         .sizes(@h: 100vh);
@@ -35,10 +35,6 @@
     .fontsize(@min, @max / 2, @mid);
       h2{
         color: var(--second);
-        text-shadow: .05rem .05rem .1rem var(--light);
-    }
-    h1 {
-        text-shadow: .1rem .1rem .1rem var(--second);
     }
 }
 

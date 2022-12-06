@@ -1,9 +1,14 @@
 img.logos {
-    max-height: 30px;
+    max-height: 40px;
+    background: var(--light);
+    padding: .5rem;
+    border-radius: .5rem;
 }
 
+.main {
+    
+}
 .projects {
-    width: 70vw;
     margin: 50px auto;
     text-align: center;
 }
