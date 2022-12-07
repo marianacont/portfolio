@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    
     <title>Mariana Conti | Practices</title>
 </head>
 <body>
 
-    <header id="header">
+    <nav class="main_nav">
+        <ul>
+            
+            <li><ul class="languages">
+                <li><a href="index.html" title="English"><img class="img-active" src="assets/icons/united-kingdom.png" alt=""></a> </li>
+                <li><a href="index-es.html" title="Español"><img src="assets/icons/argentina.png" alt=""></a></li>
+            </ul>
+
+            </li>
+        </ul>
+        <button class="btn menu-open"></button>
+        <ul class="menu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
         <h1></h1>
         <p></p>
         <img src="" alt="">
@@ -80,10 +100,20 @@
             </div>
         </article>
 
-        <article class="element">
-            <h2></h2>
-            <p></p>
-            <div></div>
+        <article class="article-balls">
+            <h2>Bouncing balls</h2>
+            <p>Just playing with CSS' animation property.</p>
+            <div class="bouncing-balls">
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+                <div class="balls"></div>
+            </div>
+
         </article>
 
         <article class="element">
@@ -98,6 +128,22 @@
             <div></div>
         </article>
     </main>
+
+    <footer>
+        <h2>Contact-me</h2>
+        
+        <div class="social">
+            <a href="https://www.linkedin.com/in/mariana-conti" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+            <a href="https://behance.net/mariana_conti" target="_blank"><i class="fa-brands fa-square-behance fa-2x"></i></a>
+        </div>
+
+
+
+        <button></button>
+    </footer>
+    
+    <script src="scripts/index.js"></script>
     
 </body>
 </html>

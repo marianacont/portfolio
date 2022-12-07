@@ -1,4 +1,4 @@
-nav {
+.main_nav {
     position: sticky;
     top:0;
     bottom: 0;
@@ -12,7 +12,8 @@ nav {
 }
 
 
-nav li a {
+
+.main_nav li a {
     color: var(--light);
 }
 
@@ -75,7 +76,7 @@ nav li a {
 
 }
 
-nav .btn:hover {
+.main_nav nav .btn:hover {
     color: var(--second);
     background-color: transparent;
     border: var(--second) 1px solid;
@@ -106,7 +107,7 @@ nav .btn:hover {
         max-height: 150px;
     }
 
-    nav {
+    .main_nav {
         border-bottom: var(--light) solid 1px;
     }
 }
@@ -126,7 +127,7 @@ nav .btn:hover {
         background-color: transparent;
     }
 
-    nav {
+    .main_nav {
         border-bottom: var(--light) solid 1px;
     }
 
@@ -136,7 +137,7 @@ nav .btn:hover {
 }
 
 @media screen and (min-width: 1400px){
-    nav {
+    .main_nav {
         padding: .5rem calc(50vw - 660px);
     }
 }

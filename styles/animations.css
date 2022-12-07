@@ -1,0 +1,27 @@
+/*  Se usa la regla @keyframes */
+
+@keyframes appear {
+    from{
+        transform: translate(50vw);
+        opacity: 0;
+    }
+}
+
+@keyframes appearFromLeft {
+    from{
+        transform: translate(-50vw);
+        opacity: 0;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: rotateX(-30degree);
+        
+    }
+
+    to {
+
+    }
+}
+

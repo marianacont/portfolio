@@ -27,6 +27,8 @@
   width: 100%;
   height: auto;
   font-size: min(calc(2vw + 0.5rem), calc(2.5rem/2));
+  animation: appear 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
 .header h2 {
   color: var(--second);
@@ -36,6 +38,8 @@
   border: 0.2rem solid var(--second);
   padding: 0.5rem;
   border-radius: 10%;
+  animation: appearFromLeft 2s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
 .r-portrait,
 .portrait {
