@@ -1,0 +1,65 @@
+@bg: var(--second);
+@sur:
+    'sur (2).jpg',
+    'sur (3).jpg',
+    'sur (4).jpg',
+    'sur (5).jpg',
+    'sur (6).jpg',
+    'sur (7).jpg',
+    'sur (8).jpg';
+
+
+.element{
+    position: relative;
+}
+
+.gallery li {
+    opacity: 0;
+    transition: all .5s ease-out;
+    & li.active{
+    opacity: 1;}
+    & .sur{
+        background: var(--bg) center/cover;
+        .bg(@sur);
+    }
+
+}
+
+[class*="gallery-"]{
+    border: none;
+    padding: 1 rem, 20%;
+    color: var(--light);
+    background-color: transparent;
+    font-size: min(calc(2vw + 1rem), 5rem);
+}
+
+.indicators {
+    position: absolute;
+    bottom: .5rem;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s ease-in-out;
+    border: none;
+}
+
+.indicators.active{
+    
+}
+
+.indicators button{
+    border-radius: 1rem;
+    padding: .5rem;
+    background-color: var(--light);
+    opacity: .5;
+}
+
+.cover{
+    .position(absolute; @z:-1);
+    .sizes;
+    opacity: .5;
+    object-fit: cover;
+}
+
+// Imagenes Galería
+.bg()

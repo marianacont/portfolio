@@ -5,7 +5,6 @@
 @import url(about.css);
 @import url(main.css);
 @import url(practices.css);
-@import url(gallery.css);
 @import url(animations.css);
 @import url(balls.css);
 
@@ -64,3 +63,6 @@ li {
     list-style: none;
 }
 
+h1, h2, h3 {
+    color: var(--second);
+}
