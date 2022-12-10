@@ -101,26 +101,30 @@
         </article>
 
         <article id="contact-form" class="element">
+
+            <iframe class="map cover" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27237.475106913822!2d-64.18593259013633!3d-31.42282063842975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1670701845138!5m2!1ses!2sar" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             <form action="" id="contact">
                 <h2>Contact form</h2>
                 <p></p>
-                <label for="contact-name" for-="">Name</label>
-                <input type="text" id="contact-name" maxlenght="50" required>
+                <label for="contact-name">Name</label>
+                <input type="email" id="contact-name" placeholder="John Smith" maxlenght="50" required>
 
-                <label for="contact-email" for-="">Email</label>
-                <input type="text" id="contact-email" required>
-                <div class="valid">Use a valid email with format "user@host.com"</div>
+                <label for="contact-email">Email</label>
+                <input type="text" id="contact-email" placeholder="user@host.com" required>
+                <div class="valid">Use a valid email like "user@host.com"</div>
 
-                <label for="" for-="">Phone</label>
-                <input type="text" id="contact-">
+                <label for="contact-phone">Phone</label>
+                <input type="phone" id="contact-phone" placeholder="(123)4567890" minlength="8" maxlength="15">
                 <div class="valid">
-                    Use only numbers, not () or other special characters, neither blank spaces
+                    Use only numbers, the phone are into parenthesis
                 </div>
 
-                <label for="" for-="">Type your consult</label>
-                <textarea name="" id="contact-consult" cols="30" rows="10" minlenght="30" maxlenght="1000" required="required"></textarea>
+                <label for="contact-consult">Type your consult</label>
+                <textarea name="consult" id="contact-consult" placeholder="Hello, I want to know about..." minlenght="30" maxlenght="1000" required></textarea>
                 <button class="btn">Send</button>
             </form>
+        
         </article>
 
         <article class="element">
