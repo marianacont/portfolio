@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 :root{
     /* Colors */
---login-first: hsl(244, 75%, 57%);
+--login-first: hsl(336, 91%, 50%);
 --login-second: hsl(249, 64%, 47%);
---login-title: hsl(244, 12%, 12%);
---login-text: hsl(244, 4%, 36%);
+--login-title: hsl(240, 86%, 15%);
+--login-text: hsl(240, 5%, 12%);
 --login-body: hsl(208, 97%, 85%);
+/* Gradiants */
+--grad-first: linear-gradient(45deg,
+var(--login-second), var(--login-first));
+
+
 /* Typography */
---login-body-font: 'Rubik', sans-serif;
+--login-body-font: 'Quicksand', sans-serif;
 --login-h2: 1.25rem;
 --login-small-font: .8rem;
 --login-smaller-font: .7rem;
@@ -16,6 +21,7 @@
 --font-semi-bold: 600;
 }
 
+/* Responsive typo */
 @media screen and (min-width: 1024px){
     :root {
         --login-h2: 1.75rem;
@@ -52,22 +58,6 @@ img{
 
 
 
-/* #login {
-    background-color: rgb(151, 26, 26);
-    position: relative;
-    width: 800px;
-    height: 500px;
-    margin: 30px;
-}
-
-.bgWhite{
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    height: 420px;
-    background-color: rgb(234, 126, 126);
-} */
-
 /* Login Form */
 .login-cotent,
 .login-form,
@@ -77,6 +67,8 @@ img{
 
 .login-content{
     position: relative;
+    display: flex;
+    justify-content: center;
     height: 100vh;
     align-items: center;
 }
@@ -84,14 +76,16 @@ img{
 .login-content img{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
 }
 
 .login-form{
     position: relative;
-    background-color: hsla(244, 16%, 92%, .6);
+    width: 50vw;
+    padding: 2rem;
+    background-color: hsla(55, 41%, 97%, 0.5);
     border: 2px solid hsla(244, 16%, 92%, .5);
     border-radius: .5rem;
     margin-inline: 1.5rem;
@@ -99,5 +93,213 @@ img{
     backdrop-filter: blur(20px);
 }
 
-/* Brackpoints */
+.login-form h1{
+    color: var(--login-title);
+    font-size: var(--login-h2);
+    margin-bottom: .5rem;
+}
 
+.login-form h1 span{
+    background: var(--grad-first);
+    color:transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.login-form p{
+    font-size: var(--login-small-font);
+}
+
+.login-inputs{
+    row-gap: .75gap;
+    margin-bottom: .5rem;
+}
+
+.login-label {
+    display: block;
+    color: var(--login-tittle);
+    font-size: var(--login-small-font);
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+
+.login-input {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 6px;
+    border: 2px solid var(--login-text);
+    background-color: hsla(244, 16%, 92%, .6);
+    color: var(--login-title);
+    font-size: var(--login-smaller-font);
+    font-weight: 600;
+    transition: border .4s;
+}
+
+.login-input::placeholder {
+color: var(--login-text);
+}
+
+.login-input:focus,
+login-input:valid {
+    border: 2px solid var(--login-first);
+}
+
+.login-box {
+    position: relative;
+
+}
+
+.login-box .login-input {
+    padding-right: 36px;
+}
+
+.login-eye {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    right: .75rem;
+    top: 2rem;
+    margin: auto 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.login-check {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+}
+
+.login-check-input {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border: 2px solid var(--login-text);
+    background-color: hsla(244, 16%, 92%, .2);
+    border-radius: .25rem;
+}
+
+.login-check-input:checked {
+    background-color: var(--login-second);
+}
+
+.login-check-input:checked::before{
+    content: '✔';
+    display: block;
+    color: white;
+    font-size: .6rem;
+    transform: translate(2.5px, -.5px);
+}
+
+
+.login-check-label {
+    font-size: var(--login-small-font);
+}
+
+.login-buttons {
+    display: flex;
+    column-gap: .75rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px 2rem;
+    border-radius: 6px;
+    background: var(--grad-first);
+    color: white;
+    font-size: var(--login-small-font);
+    font-weight: 700;
+    box-shadow: 0 6px 24px hsla(244, 75%, 48%, .5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.btn-ghost {
+    background: hsla(244, 16%, 92%, .6);
+    border: 2px solid var(--login-first);
+    color: var(--login-first);
+    box-shadow: none;
+}
+
+.login-forgot {
+    font-size: var(--login-smaller-font);
+    font-weight: 700;
+    color: var(--login-first);
+    text-decoration: none;
+}
+
+
+
+
+/* Brackpoints */
+/* For small devices */
+@media screen and (max-width: 360px) {
+    .login-buttons {
+        flex-direction: column;
+    }
+}
+/* For medium devices */
+@media screen and (max-width: 576px){
+    .login-form{
+        width: 450px;
+        justify-content: center;
+    }
+}
+/* For large devices */
+@media screen and (max-width: 1064px){
+    .container {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .login-content{
+        width: 1024px;
+        height: 600px;
+    }
+    .login-form img{
+        border-radius: 3.5rem;
+        box-shadow: 0 24px 48px hsla(244, 75%, 48%, .45);
+    }
+    .login-form{
+        justify-self: flex-end;
+        margin-right: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    /* .login-content {
+        height: 700px;
+    } */
+    .login-form{
+        row-gap: 2rem;
+        padding: 3rem;
+        border-radius: 1.25rem;
+        border: 2.5px solid hsla(244, 16%, 92%, .75);
+    }
+    .login-form p,
+    .login-label,
+    .login-btn {
+        font-size: var(--login-normal-font);
+    }
+    .login-inputs{
+        row-gap: 1.25rem;
+        margin-bottom: .75rem;
+    }
+    .login-input{
+        border: 2.5px solid var(--login-text);
+        padding: 1rem;
+        font-size: var(--login-small-font);
+    }
+    .login-input:focus,
+    .login-input:valid{
+        border: 2.5px solid var(--login-first);
+    }
+    .login-btn{
+        padding-block: 1rem;
+        margin-bottom:  1.25rem;
+    }
+    .btn-ghost{
+        border: 1.5px solid var(--login-first);
+    }
+}

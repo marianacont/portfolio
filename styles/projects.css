@@ -1,0 +1,16 @@
+/* Projects */
+/* 
+.element{
+    display: flex;
+    flex-direction: column;
+} */
+
+.p-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+
