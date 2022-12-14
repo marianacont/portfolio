@@ -1,3 +1,4 @@
+/* Navigation */
 .main_nav {
     position: sticky;
     top:0;
@@ -17,12 +18,28 @@
     color: var(--light);
 }
 
+/* Languages switch */
+
 .languages {
      display: flex;
+}
+.flag {
+    width: 20px;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.flag:hover,
+.flag:active,
+.img-active  {
+    box-sizing: content-box;
+    box-shadow: 2px 2px 5px var(--light) inset;
 }
 
 
 
+/* Menu */
 
 .menu {
     height: 100%;
@@ -50,18 +67,7 @@
     font-weight: 600;
 }
 
-.languages img {
-    width: 20px;
-    border-radius: 10px;
-    display: block;
-}
 
-.languages img:hover,
-.languages img:active,
-.img-active  {
-    box-sizing: content-box;
-    box-shadow: 2px 2px 5px var(--light) inset;
-}
 
 
 

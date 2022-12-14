@@ -22,3 +22,21 @@ const showHiddenPass = (inputPass, inputIcon) =>{
 }
 
 showHiddenPass('input-pass', 'input-eye')
+
+
+
+// 
+const form = document.querySelector('#form'),
+        user = document.getElementById('email'),
+        pass = document.getElementById('pass'),
+        button = document.getElementById('login-btn')
+
+
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const data = {
+        user: user.value,
+        pass: pass.value
+    }
+    console.log(data)
+})

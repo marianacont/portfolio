@@ -201,7 +201,7 @@ login-input:valid {
     column-gap: .75rem;
 }
 
-.login-btn {
+.form-btn {
     width: 100%;
     padding: 14px 2rem;
     border-radius: 6px;

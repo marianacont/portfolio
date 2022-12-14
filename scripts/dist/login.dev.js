@@ -22,4 +22,17 @@ var showHiddenPass = function showHiddenPass(inputPass, inputIcon) {
   });
 };
 
-showHiddenPass('input-pass', 'input-eye');
+showHiddenPass('input-pass', 'input-eye'); // 
+
+var form = document.querySelector('#form'),
+    user = document.getElementById('email'),
+    pass = document.getElementById('pass'),
+    button = document.getElementById('login-btn');
+button.addEventListener('click', function (e) {
+  e.preventDefault();
+  var data = {
+    user: user.value,
+    pass: pass.value
+  };
+  console.log(data);
+});

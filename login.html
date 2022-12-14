@@ -15,7 +15,7 @@
         <div class="login-content">
             <img src="assets/img/sur (2).jpg" alt="Caucasus mountains">
 
-            <form action="" class="login-form">
+            <form id="form" action="" class="login-form">
                 
                 <div>
                     <h1> <span>Welcome</span> Back</h1>
@@ -24,14 +24,14 @@
                 <div>
                     <div class="login-inputs">
                         <div>
-                            <label for="" class="login-label">Email</label>
-                            <input type="email" placeholder="Enter your email" required class="login-input">
+                            <label for="email" class="login-label">Email</label>
+                            <input id="email" type="email" placeholder="Enter your email" required class="login-input">
                         </div>
                         <div>
                         <div class="login-box">
                             <label for="" class="login-label">Password</label>
                             <div>
-                            <input type="password" placeholder="Enter your password" required class="login-input" id="input-pass">
+                            <input id="pass" type="password" placeholder="Enter your password" required class="login-input" id="input-pass">
                             <i class="ri-eye-off-fill login-eye" id="input-eye"></i>
                         </div>
                         </div>
@@ -47,8 +47,8 @@
 
                 <div>
                     <div class="login-buttons">
-                        <button class="login-btn">Log In</button>
-                        <button class="login-btn btn-ghost">Sign Up</button>
+                        <button id="login-btn" class="form-btn">Log In</button>
+                        <button class="form-btn btn-ghost">Sign Up</button>
                     </div>
 
                     <a href="#" class="login-forgot">Forgot Pasword?</a>
