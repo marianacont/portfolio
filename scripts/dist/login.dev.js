@@ -26,7 +26,7 @@ showHiddenPass('input-pass', 'input-eye'); //
 
 var form = document.querySelector('#form'),
     user = document.getElementById('email'),
-    pass = document.getElementById('pass'),
+    pass = document.getElementById('input-pass'),
     button = document.getElementById('login-btn');
 button.addEventListener('click', function (e) {
   e.preventDefault();
@@ -35,4 +35,10 @@ button.addEventListener('click', function (e) {
     pass: pass.value
   };
   console.log(data);
+
+  if (user.value === 'user@host.com' & pass.value === '12345') {
+    alert("Welcome back, User!");
+  } else {
+    alert("Wrong user");
+  }
 });

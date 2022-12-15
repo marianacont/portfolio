@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 :root{
     /* Colors */
@@ -14,22 +14,15 @@ var(--login-second), var(--login-first));
 
 /* Typography */
 --login-body-font: 'Quicksand', sans-serif;
---login-h2: 1.25rem;
---login-small-font: .8rem;
---login-smaller-font: .7rem;
---font-regular: 500;
+--login-h1: 2.5rem;
+--login-p: 1.25rem;
+--login-smaller-font: .8rem;
+--font-regular: 400;
 --font-semi-bold: 600;
+--font-bold: 800;
 }
 
-/* Responsive typo */
-@media screen and (min-width: 1024px){
-    :root {
-        --login-h2: 1.75rem;
-        --login-normal-font: 1rem;
-        --login-small-font: .85rem;
-        --login-smaller-font: .75rem;
-    }
-}
+
 /* Base */
 
 *{
@@ -39,7 +32,7 @@ var(--login-second), var(--login-first));
 }
 
 body {
-    background-color: var(--login-body);
+    background-image: var(--grad-first);
     font-family: var(--login-body-font);
     color: var(--login-text);
 }
@@ -56,7 +49,15 @@ img{
     height: auto;
 }
 
-
+.container {
+    display: grid;
+    background-image: url(../assets/img/cau_mountains.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
 
 /* Login Form */
 .login-cotent,
@@ -65,38 +66,25 @@ img{
     display: grid;
 }
 
-.login-content{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-}
 
-.login-content img{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-}
 
 .login-form{
     position: relative;
-    width: 50vw;
+    width: clamp(min(70vw,350px), 50vw, 800px);
     padding: 2rem;
+    margin: auto;
     background-color: hsla(55, 41%, 97%, 0.5);
     border: 2px solid hsla(244, 16%, 92%, .5);
     border-radius: .5rem;
-    margin-inline: 1.5rem;
     row-gap: 1.25rem;
     backdrop-filter: blur(20px);
 }
 
 .login-form h1{
     color: var(--login-title);
-    font-size: var(--login-h2);
+    font-size: var(--login-h1);
     margin-bottom: .5rem;
+    font-weight: var(--font-bold);
 }
 
 .login-form h1 span{
@@ -106,12 +94,11 @@ img{
     -webkit-background-clip: text;
 }
 
-.login-form p{
-    font-size: var(--login-small-font);
+.login-form p {
+    font-size: var(--login-p);
 }
 
 .login-inputs{
-    row-gap: .75gap;
     margin-bottom: .5rem;
 }
 
@@ -125,6 +112,7 @@ img{
 
 .login-input {
     width: 100%;
+    margin-bottom: .5rem;
     padding: 14px 12px;
     border-radius: 6px;
     border: 2px solid var(--login-text);
@@ -158,7 +146,7 @@ login-input:valid {
     height: max-content;
     position: absolute;
     right: .75rem;
-    top: 2rem;
+    top: 2.25rem;
     margin: auto 0;
     font-size: 1.25rem;
     cursor: pointer;
@@ -229,77 +217,23 @@ login-input:valid {
 }
 
 
-
-
 /* Brackpoints */
 /* For small devices */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 576px){
+    .login-form {
+        padding: 2rem 1rem;
+    }
     .login-buttons {
         flex-direction: column;
     }
-}
-/* For medium devices */
-@media screen and (max-width: 576px){
-    .login-form{
-        width: 450px;
-        justify-content: center;
-    }
-}
-/* For large devices */
-@media screen and (max-width: 1064px){
-    .container {
-        height: 100vh;
-        display: grid;
-        place-items: center;
-    }
-
-    .login-content{
-        width: 1024px;
-        height: 600px;
-    }
-    .login-form img{
-        border-radius: 3.5rem;
-        box-shadow: 0 24px 48px hsla(244, 75%, 48%, .45);
-    }
-    .login-form{
-        justify-self: flex-end;
-        margin-right: 4.5rem;
-    }
-}
-
-@media screen and (max-width: 1200px){
-    /* .login-content {
-        height: 700px;
-    } */
-    .login-form{
-        row-gap: 2rem;
-        padding: 3rem;
-        border-radius: 1.25rem;
-        border: 2.5px solid hsla(244, 16%, 92%, .75);
-    }
-    .login-form p,
-    .login-label,
-    .login-btn {
-        font-size: var(--login-normal-font);
-    }
     .login-inputs{
-        row-gap: 1.25rem;
-        margin-bottom: .75rem;
+        margin-bottom: 1rem;
     }
-    .login-input{
-        border: 2.5px solid var(--login-text);
-        padding: 1rem;
-        font-size: var(--login-small-font);
-    }
-    .login-input:focus,
-    .login-input:valid{
-        border: 2.5px solid var(--login-first);
-    }
-    .login-btn{
-        padding-block: 1rem;
-        margin-bottom:  1.25rem;
-    }
-    .btn-ghost{
-        border: 1.5px solid var(--login-first);
-    }
+}
+
+
+@media screen and (max-width: 1024px){
+   
+
+
 }
