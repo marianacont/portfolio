@@ -23,7 +23,6 @@
     border: 0;
     padding: 1rem;
     max-width: 40rem;
-    max-height: unset;
     width: 100%;
     height: auto;
     font-size: min(calc(2vw + 0.5rem), calc(5rem / 2/2));
@@ -31,7 +30,7 @@
     animation-fill-mode: backwards;
   }
   .portrait {
-    margin: 0.5rem;
+    margin: 2rem 0.5rem 0;
     border: 0.2rem solid var(--second);
     padding: 0.5rem;
     border-radius: 10%;

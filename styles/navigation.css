@@ -46,6 +46,7 @@
     left: -100%;
     top: 0;
     overflow: hidden;
+    margin: 0;
 }
 
 .menu a{
@@ -113,6 +114,7 @@
 
     .menu.active{
         max-height: 150px;
+        margin:0;
     }
 
 }
@@ -126,6 +128,7 @@
     .menu.active {
         display: flex;
         width: auto;
+        margin-right: 1rem;
         justify-content: end;
         gap: 1.3rem;
         max-height: 40px;

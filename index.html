@@ -13,13 +13,7 @@
 <body>
 
     <nav class="main_nav">
-        <!-- <ul>    
-            <li><ul class="languages">
-                <li><a href="index.html" title="English"><img class="flag img-active" src="assets/icons/united-kingdom.png" alt=""></a> </li>
-                <li><a href="index-es.html" title="Español"><img class="flag" src="assets/icons/argentina.png" alt=""></a></li>
-            </ul>
-            </li>
-        </ul> -->
+        
         <button class="btn menu-open"></button>
         <ul class="menu">
             <li><a href="#about">About</a></li>
@@ -48,99 +42,78 @@
             
             <div>         
                 <h2>Skills and tools</h2>
-            <ul class="skills">
-                <li><i class="fa-brands fa-html5 fa-2x"></i>HTML5</li>
-                <li><i class="fa-brands fa-css3-alt fa-2x"></i>SCC3</li>
-                <li><i class="fa-brands fa-square-js fa-2x"></i>JavaScript</li>
-                <li><i class="fa-brands fa-less fa-2x"></i>Less</li>
-                <li><i class="fa-brands fa-sass fa-2x"></i>Sass</li>
-                <li><i class="fa-brands fa-wordpress fa-2x"></i>Wordpress</li>
-                <li><i class="fa-brands fa-figma fa-2x"></i>Figma</li>
-                <li><i class="fa-solid fa-user fa-2x"></i>UX design</li>
-                <li><i class="fa-solid fa-magnifying-glass fa-2x"></i>Web SEO</li>
-                <li><i class="fa-solid fa-bezier-curve fa-2x"></i>Adobe Illustrator</li>
-                <li><i class="fa-solid fa-paintbrush fa-2x"></i>Adobe Photoshop</li>
+            <ul class="skills-list">
+                <li><i class="fa-brands fa-html5 fa-2x"></i></li>
+                <li><i class="fa-brands fa-css3-alt fa-2x"></i></li>
+                <li><i class="fa-brands fa-square-js fa-2x"></i></li>
+                <li><i class="fa-brands fa-less fa-2x"></i></li>
+                <li><i class="fa-brands fa-sass fa-2x"></i></li>
+            </ul>
+               <ul class="skills-list">
+                <li><i class="fa-brands fa-wordpress fa-lg"></i></li>
+                <li><i class="fa-brands fa-figma fa-lg"></i></li>
+                <li><i class="fa-solid fa-user fa-lg"></i></li>
+                <li><i class="fa-solid fa-bezier-curve fa-lg"></i></li>
+                <li><i class="fa-solid fa-paintbrush fa-lg"></i></li>
             </ul>
             </div>
  
             
-            <div class="languages">
-            <h2>Languages</h2>
-            <i class="languages-icon fa-solid fa-comments fa-3x"></i>
-            <ul>
-                <li>Spanish (native)</li>
-                <li>English</li>
-                <li>French</li>
-                <li>Portguese</li>
-            </ul>
+            <div id="languages">
+                    <i class="languages-icon fa-solid fa-comments fa-2x"></i>
+                    <ul>
+                        <li>Spanish (native)</li>
+                        <li>English</li>
+                        <li>French</li>
+                        <li>Portguese</li>
+                    </ul>
+                
             </div>
         </section>
     
-    </section>
-
-
-        <!-- <section class="projects">
-            <h2>Some projects</h2>
-                <div>
-                    <div class="ficha">
-                        <img src="assets/img/web_calcaterra.jpg" alt="">
-                        <h3>Web: Rubén Calcaterra - Conflictología</h3>
-                        <p>Personal web design and communication strategist for a professional lawyer. Ruben Calcaterra is an outstanding lawyer, with a wide experience. He has participated in congresses and published several books on Conflicitology.
-                        <br>    He needed to update his website to a more modern one, including a blog where he could post articles about his research, as well as contributions from colleagues and students.</p>
-                        <ul>
-                            <li>Technology: Wordpress</li>
-                            <li>Year: 2020 to today</li>
-                            <li>Also: Instagram, Facebook, Linkedin, E-mail marketing</li>
-                        </ul>
-                        <a class="enlace" href="http://calcaterra-conflictologia.com">Visitar</a>
-                    </div>
-                    
-                    
-                    
-                </div>
-            
-        </section> -->
-
-        <section class="currently">
-            <div class="bloc">
-                <h3>What I'm currently studing?</h3>
-                <p>I'm taking courses in Educación IT to become a Front-end Web Developer. The career is aimed at becoming a Front-end Javascript developer expert in React.js.
-                <br>It includes this courses: </p>
-                <img class='logos' src="assets/img/educacionIT.svg" alt="Educación IT logo">
-                <ul>
-                    <li><i class="fa-regular fa-circle-check"></i>   Web design: HTML5 y CSS</li>
-                    <li><i class="fa-regular fa-circle-check"></i>   Web design using SASS and LESS</li>
-                    <li><i class="fa-regular fa-circle-check"></i>   Javascript from start</li>
-                    <li><i class="fa-regular fa-circle-check"></i>   Javascript Advanced Developer</li>
-                    <li><i class="fa-regular fa-circle-check"></i>   Introduction to UX design</li>
-                    <li><i class="fa-regular fa-circle-check"></i>   Introduction to Object Oriented Paradigm</li>
-                    <li><i class="fa-regular fa-circle"></i>   Responsive Web Design & Bootstrap</li>
-                    <li><i class="fa-regular fa-circle"></i>   React.js Developer</li>
-                    <li><i class="fa-regular fa-circle"></i>   Javascript AWP</li>
-                </ul>
-
-            </div>
-            <!-- <div class="bloc">
-                <h3>What I'm reading?</h3>
-                <p><strong>The javascript language: </strong> A tutorial to learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
-                <br> It concentrates on the language itself, with the minimum of environment-specific notes.
-                    About the JavaScript language and the environment to develop with it.</p>
-                <img class="book" src="assets/img/javascript_tutorial.jpg" alt="">
-            </div> -->
+   
+        <section class="projects">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3>Login and registration form</h3>
+                <p>A modern login and registrattion form using HTML, CSS ans JS. A blur backgound for a "glass" effect and some gradients.</p>
+                <a href="login.html" target="_blank"><img class="p-img" src="assets/img/login.jpg" alt="Login form"></a>
+            </article>
         </section>
 
-        <!-- Section About -->
         <section id="about">
-            <h2>About me</h2>
-            <div class="header">
+            <h2>About me</h2>            
+            <div>
+                <img src="assets/img/sur1.jpg" alt="" class="portrait">
                 <p>I'm Mariana Conti, I live in a small city called Santa Rosa de Calamuchita, in Córdoba, Argentina. I studied Social Communication at Córdoba University, but recently I decided to change course and get into web development. I'm taking courses at Educación IT and learning by my own.
                 <br><strong>My goal is to become a Front-end web developer</strong>, with a broad command of the relevant languages such as HTML, CSS and Javascript. In addition to being updated on the latest technologies and practices.
                 <br>My previous career nourished me with knowledge that I consider very useful also in this field, since it trained me to develop effective communications that take into account all the people involved during the discursive process.
                 </p>
-                <img src="assets/img/sur1.jpg" alt="" class="portrait">
+                
             </div>
             
-        </section>
+            <section class="currently">
+                <div class="bloc">
+                    <h3>What I'm currently studing?</h3>
+                    <p>I'm taking courses in Educación IT to become a Front-end Web Developer. The career is aimed at becoming a Front-end Javascript developer expert in React.js.
+                    <br>It includes this courses: </p>
+                    <a href="https://www.educacionit.com/" target="_blank"><img class='logos' src="assets/img/educacionIT.svg" alt="Educación IT logo"></a>
+                    <ul>
+                        <li><i class="fa-regular fa-circle-check"></i>   Web design: HTML5 y CSS</li>
+                        <li><i class="fa-regular fa-circle-check"></i>   Web design using SASS and LESS</li>
+                        <li><i class="fa-regular fa-circle-check"></i>   Javascript from start</li>
+                        <li><i class="fa-regular fa-circle-check"></i>   Javascript Advanced Developer</li>
+                        <li><i class="fa-regular fa-circle-check"></i>   Introduction to UX design</li>
+                        <li><i class="fa-regular fa-circle-check"></i>   Introduction to Object Oriented Paradigm</li>
+                        <li><i class="fa-regular fa-circle"></i>   Responsive Web Design & Bootstrap</li>
+                        <li><i class="fa-regular fa-circle"></i>   React.js Developer</li>
+                        <li><i class="fa-regular fa-circle"></i>   Javascript AWP</li>
+                    </ul>
+    
+                </div>
+              
+            </section>
+        </section>  
 
           
 
@@ -154,12 +127,12 @@
             <a href="https://www.linkedin.com/in/mariana-conti" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
             <a href="" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
             <a href="https://behance.net/mariana_conti" target="_blank"><i class="fa-brands fa-square-behance fa-2x"></i></a>
+            <a href="mailto:marianacontipeycere@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a>
         </div>
-
-
     </footer>
 
-    <script src="scripts/index.js"></script>
+    
+    <script src="scripts/index.js"></script>        
 
 </body>
 </html>

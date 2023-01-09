@@ -1,10 +1,12 @@
 /* Projects */
-/* 
-.element{
-    display: flex;
-    flex-direction: column;
-} */
 
+.projects{
+    width: 80vw;
+    margin: auto;
+}
+.project{
+    margin: 2rem 0;
+}
 .p-img {
     display: block;
     margin: 0 auto;

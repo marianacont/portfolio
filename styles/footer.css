@@ -1,0 +1,18 @@
+#footer{
+    margin: 50px auto;
+    position: relative;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social i{
+    color: var(--first);
+
+}
+
+.social i:hover{
+    text-shadow: .1rem .1rem .3rem var(--second);
+
+}

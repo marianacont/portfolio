@@ -36,3 +36,4 @@ function setElement(array, type){
     newItem.classList.add(className)
 }
 
+// Carrousel

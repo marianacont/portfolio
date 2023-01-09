@@ -1,0 +1,14 @@
+#about{
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
+
+.currently p,
+.currently li{
+    font-size: .85rem;
+}
+
+.logos{
+    height: 1rem;
+}
