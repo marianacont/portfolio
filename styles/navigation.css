@@ -5,9 +5,9 @@
     bottom: 0;
     display: flex;
     justify-content:space-between;
-    flex-wrap: wrap;
     align-items: center;
-    padding: .5rem;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 0 1rem;
     border-top: var(--light) solid 1px;
     z-index: 1;
 }
@@ -97,20 +97,34 @@
 }
 
 
+/* Projects section nav */
+
+#proj_nav {
+    padding: 1rem;
+}
+
+.fa-house-chimney {
+    color: var(--second);
+}
+
+
+
+/* Responsive */
 
 
 @media screen and (min-width: 768px){
     .menu {
+        position: fixed;
         width: 100%;
-        height: auto;
-        position: static;
-        max-height: 0;
+        max-height: 100px;
         background-color: transparent;
     }
 
 
     .menu.active{
+        display: flex;
         max-height: 150px;
+        align-items: center;
     }
 
     .main_nav {
@@ -119,6 +133,9 @@
 }
 
 @media screen and (min-width: 992px) {
+    .main_nav {
+        border-bottom: var(--light) solid 1px;
+    }
     .btn.menu-open {
         display: none;
     }
@@ -126,6 +143,7 @@
     .menu, 
     .menu.active {
         display: flex;
+        position: sticky;
         width: auto;
         justify-content: end;
         gap: 1.3rem;
@@ -133,16 +151,13 @@
         background-color: transparent;
     }
 
-    .main_nav {
-        border-bottom: var(--light) solid 1px;
-    }
-
-
-
-
 }
 
+
 @media screen and (min-width: 1400px){
+    .main {
+        position: sticky;
+    }
     .main_nav {
         padding: .5rem calc(50vw - 660px);
     }

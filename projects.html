@@ -5,21 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
     
-    <title>Mariana Conti | Practices</title>
+    <title>Mariana Conti | Projects</title>
 </head>
 <body>
 
-    <nav class="main_nav">
-        <ul>
-            
-            <li><ul class="languages">
-                <li><a href="index.html" title="English"><img class="img-active" src="assets/icons/united-kingdom.png" alt=""></a> </li>
-                <li><a href="index-es.html" title="Español"><img src="assets/icons/argentina.png" alt=""></a></li>
-            </ul>
-
-            </li>
-        </ul>
+    <nav id="proj_nav" class="main_nav">
+        <a href="index.html"><i class="fa-solid fa-house-chimney fa-xl"></i></a>
         <button class="btn menu-open"></button>
         <ul class="menu">
             <li><a href="index.html#about">About</a></li>
@@ -28,21 +21,24 @@
         </ul>
     </nav>
 
-    <header>
-        <h1></h1>
-        <p></p>
+    <header id="proj_header" class="header">
+       <h1 id="proj-title">Projects</h1>
+        <p>In this section I want to share some projects that I've developed, using the tools and languages availables. These are projects that can be useful for the development of websites, such as login or contact forms, landing pages, counters, image galleries, etc.</p>
         <img src="" alt="">
+
+        <div class="menu-prac">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Glass of water</a></li>
+                <li><a href="#">Baby food</a></li>
+                li´+<a href="#">Wordpress Designs</a>
+            </ul>
+        </div>
     </header>
 
-    <nav class="menu-prac">
-        <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Map</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Glass of water</a></li>
-            <li><a href="#">Baby food</a></li>
-        </ul>
-    </nav>
+
 
     <main>
         <article class="element">
@@ -124,6 +120,7 @@
     </footer>
     
     <script src="scripts/index.js"></script>
+    <script src="scripts/projects.js"></script>
     
 </body>
 </html>

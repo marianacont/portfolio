@@ -1,9 +1,13 @@
 /* Projects */
-/* 
-.element{
-    display: flex;
-    flex-direction: column;
-} */
+
+#proj_header{
+    margin: auto;
+    animation: none;
+}
+
+#proj-title {
+    height: 50px;
+}
 
 .p-img {
     display: block;
@@ -14,3 +18,12 @@
 }
 
 
+.menu-prac ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-prac a {
+    text-decoration: none;
+    color: var(--second);
+}
