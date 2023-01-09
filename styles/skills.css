@@ -1,0 +1,42 @@
+  .skills{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .skills i {
+    text-shadow: 0.1rem 0.1rem 0.3rem var(--second);
+  }
+  .skills ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  ul.skills li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+
+  .languages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  @media screen and (min-width: 992px) {
+    .skills i {
+      text-shadow: 0,0,0,0;
+    }
+    .skills i :hover {
+      text-shadow: 0.1rem 0.1rem 0.3rem var(--second);
+
+    }
+  }

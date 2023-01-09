@@ -78,9 +78,10 @@
 
 .skills {
     text-align: center;
-    & h3{
-    border-top: 1px solid var(--second);
-    margin: 0 25vw;}
+    .flexbox(@ai:center);   
+        & h3{
+        border-top: 1px solid var(--second);
+        margin: 0 25vw;}
 }
 
 ul.skills {
@@ -94,7 +95,6 @@ ul.skills {
     .icon;
     margin: 20px;
 }
-
 
 #footer {
     margin: 50px auto;
@@ -123,7 +123,7 @@ ul.skills {
     @ai: stretch;
     @g: 1rem;
     @fw: wrap;
-    @d: flex
+    @d: flex;
 ){
     display: @d;
     flex-direction: @fd;
