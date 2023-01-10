@@ -1,7 +1,9 @@
 #about{
     width: 80vw;
     margin: auto;
+    margin-bottom: 5rem;
     text-align: center;
+    height: auto;
 }
 
 .currently p,

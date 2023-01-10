@@ -1,6 +1,4 @@
 /* Projects */
-<<<<<<< HEAD
-=======
 
 #proj_header{
     margin: auto;
@@ -10,11 +8,11 @@
 #proj-title {
     height: 50px;
 }
->>>>>>> origin
 
 .projects{
     width: 80vw;
     margin: auto;
+    text-align: center;
 }
 .project{
     margin: 2rem 0;

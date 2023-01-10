@@ -7,11 +7,11 @@
 @import url(footer.css);
 
 :root{
-    --first: #0d5b6b;
-    --second: rgb(234, 156, 0);
+    --first: #0066a0;
+    --second: rgb(1, 162, 143);
     --light: #E4EAEA;
     --gray: #ccc;
-    --dark: #333;
+    --dark: rgb(43, 44, 51);
 }
 
 
@@ -78,7 +78,7 @@ main{
     grid-area: main;
 }
 
-footer {
+#footer {
     grid-area: footer;
 }
 

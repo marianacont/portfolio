@@ -31,8 +31,8 @@
   }
   .portrait {
     margin: 2rem 0.5rem 0;
-    border: 0.2rem solid var(--second);
-    padding: 0.5rem;
+    border: 0.2rem solid var(--dark);
+    padding: .2rem;
     border-radius: 10%;
     animation: appearFromLeft 2s ease-out 0.5s;
     animation-fill-mode: backwards;
@@ -40,7 +40,7 @@
   .r-portrait,
   .portrait {
     width: 100%;
-    max-width: 7.5rem;
+    max-width: 9rem;
   }
   #about {
     margin: 0;

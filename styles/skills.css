@@ -17,7 +17,6 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    font-size: .75rem;
   }
 .skills-list li {
     display: flex;
@@ -34,7 +33,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: .75rem;
   }
 
   #languages ul{
@@ -42,6 +40,12 @@
     justify-content: space-around;
     gap: 1rem;
   }
+
+  .skills i:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    text-shadow: rgba(43, 44, 51, 0.381) 1px 1px 5px;
+}
 
 
   @media screen and (min-width: 992px) {
