@@ -14,7 +14,8 @@ nav{
     display: flex;
     position: sticky;
     top: 0;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 24px;
     height: 10vh;
     background-color: white;
 }
@@ -96,9 +97,9 @@ h1 {
 /* Modal */
 
 .modal-container {
-    width: 60vw;
+    width: 600px;
     background-color: rgb(212, 85, 85);
-    margin: 0 35%;
+    right: 0;
     max-height: 88vh;
     color: beige;
     display: flex;
@@ -109,7 +110,17 @@ h1 {
     z-index: 2;
     top: 10vh;
     scrollbar-color: none;
+    animation: swipeLeft .26s ease;
 }
+@keyframes swipeLeft {
+    from {
+      right: -600px;
+    }
+  
+    to {
+      right: 0;
+    }
+  }
 
 .modal-container::-webkit-scrollbar {
     display: none;

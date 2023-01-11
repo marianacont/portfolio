@@ -4,7 +4,7 @@ const shopCart = () => {
     modalContainer.style.display = 'flex';
     const modalHeader = document.createElement('div');
     modalHeader.className = "modal-header";
-    modalHeader.innerHTML = `<h2 class="modal-title">Your cart</h2>`;
+    modalHeader.innerHTML = `<h2 class="modal-title">My order</h2>`;
     modalContainer.append(modalHeader);
 
     const modalBtn = document.createElement('h2');
