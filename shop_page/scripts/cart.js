@@ -1,3 +1,4 @@
+// Crear modal
 const shopCart = () => {
 
     modalContainer.innerHTML = '';
@@ -17,6 +18,7 @@ const shopCart = () => {
 
     modalHeader.append(modalBtn);
 
+// Carga productos al carrito/modal
     cart.forEach((product) => {
         let cartContent = document.createElement('div');
         cartContent.className = 'modal-content';
@@ -29,7 +31,7 @@ const shopCart = () => {
 
         modalContainer.append(cartContent);
 
-        // Delete product button
+// Delete product button
         let deleteElement = document.createElement('span');
         deleteElement.innerText = '❌';
         deleteElement.className = 'delete-element';
@@ -48,7 +50,7 @@ const shopCart = () => {
     seeCart.addEventListener('click', (shopCart))
 
 
-    // Delete product function
+// Delete product function
     const deleteProduct = () => {
         const foundId = cart.find((element) => element.id);
         cart = cart.filter((cartId) => {

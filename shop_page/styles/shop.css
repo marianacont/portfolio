@@ -8,6 +8,8 @@ import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 body {
     margin: 0;
     font-family: 'Chivo Mono', monospace;
+    background-color: black;
+    color: white;
 }
 
 nav{
@@ -15,13 +17,15 @@ nav{
     position: sticky;
     top: 0;
     justify-content: space-between;
+    align-items: center;
     padding: 0 24px;
     height: 10vh;
-    background-color: white;
+    background-color: #334;
 }
 
 #see-cart {
     cursor: pointer;
+    font-size: 20pt;
 }
 
 header {
@@ -56,18 +60,19 @@ h1 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0 ,0, 0.2);
-    max-width: 400px;
-    margin: auto;
+    max-width: 300px;
+    margin: 10px auto;
     text-align: center;
 }
 
 .card img {
     width: 100%;
-    max-height: 400px;
+    max-height: 300px;
 }
 
 .price {
@@ -78,12 +83,13 @@ h1 {
 .shop-btn {
     border: none;
     outline: 0;
-    padding: 12px;
+    padding: 8px;
     color: white;
-    background-color: rgb(212, 85, 85);
+    background-color: #334;
     text-align: center;
     cursor: pointer;
     width: 100%;
+    font-family: 'Chivo Mono', monospace;
     font-size: 18px;
 }
 
@@ -98,7 +104,7 @@ h1 {
 
 .modal-container {
     width: 600px;
-    background-color: rgb(212, 85, 85);
+    background-color: #334;
     right: 0;
     max-height: 88vh;
     color: beige;
@@ -165,13 +171,18 @@ h1 {
 
 /* Cart products counter */
 .counter {
-    background-color: rgb(212, 85, 85);
-    color: white;
+    background-color: white;
+    color: #334;
     border-radius: 50%;
     font-size: 12px;
-    padding: 2.5px;
+    padding: 3px 3px 5px 3px;
+    right: 0;
+    margin-right: 25px;
+    margin-top: -10px;
+    text-align: center;
     width: 10px;
     height: 10px;
     position: absolute;
     display: none;
+    box-shadow: 1px 1px 8px 0px rgba(215, 215, 212, 0.254);
 }
