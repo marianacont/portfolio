@@ -18,6 +18,7 @@ const shopCart = () => {
 
     modalHeader.append(modalBtn);
 
+    
 // Carga productos al carrito/modal
     cart.forEach((product) => {
         let cartContent = document.createElement('div');
@@ -26,10 +27,26 @@ const shopCart = () => {
         <img src=${product.img}>
         <h3>${product.id}</h3>
         <p>$${product.price}</p>
+        <span class="rest"> - </span>
         <p>${product.lot}</p>
+        <span class="sum"> + </span>
         <p>Total: ${product.lot * product.price}</p>`
 
         modalContainer.append(cartContent);
+
+// Sumar y restar productos desde el modal
+    let rest = cartContent.querySelector('.rest')
+    rest.addEventListener("click", () =>{
+        product.lot--;
+        saveLocal()
+        shopCart()        
+    })
+    let sum = cartContent.querySelector('.sum')
+    sum.addEventListener("click", () =>{
+        product.lot++;
+        saveLocal()
+        shopCart()        
+    })
 
 // Delete product button
         let deleteElement = document.createElement('span');
@@ -57,11 +74,15 @@ const shopCart = () => {
             return cartId !== foundId;
         })
         cartCounter()
+        saveLocal()
         shopCart()
     }
 
 // Counter function
 const cartCounter = () =>{
     counter.style.display= "block";
-    counter.innerText = cart.length
+    const cartLength = cart.length;
+    localStorage.setItem('cartLength', JSON.stringify(cartLength));
+    counter.innerText = JSON.parse(localStorage.getItem('cartLength'));
 }
+cartCounter()
