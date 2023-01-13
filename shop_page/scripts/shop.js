@@ -160,7 +160,8 @@ products.forEach((product) => {
 
         
         console.log(cart)
-        cartCounter()
+        cartCounter();
+        saveLocal();
     })
 })
 

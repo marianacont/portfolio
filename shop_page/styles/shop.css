@@ -25,7 +25,7 @@ nav{
 
 #see-cart {
     cursor: pointer;
-    font-size: 20pt;
+    font-size: 18pt;
 }
 
 header {
@@ -33,7 +33,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-       height: 70vh;
+    height: 70vh;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -185,4 +185,27 @@ h1 {
     position: absolute;
     display: none;
     box-shadow: 1px 1px 8px 0px rgba(215, 215, 212, 0.254);
+}
+
+/* Banner */
+.off{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(38, 38, 38, 0.5)), url(../assets/off.jpg);
+    width: 80vw;
+    height: 450px;
+    margin: 100px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.off h2{
+    font-size: 5rem;
+}
+.off h3 {
+    font-size: 3.5rem;
 }
