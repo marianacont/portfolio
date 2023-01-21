@@ -116,7 +116,8 @@ const products = [
     },
 ]
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('productsCart')) || [];
+
 const modalContainer = document.getElementById('modal-container');
 const counter = document.getElementById('counter')
 
@@ -166,3 +167,7 @@ products.forEach((product) => {
 })
 
 
+// LocalStorage
+const saveLocal = () => {
+    localStorage.setItem("poductsCart", JSON.stringify(cart));
+    };

@@ -136,8 +136,8 @@ h1 {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: beige;
+    color: #334;
 }
 
 .modal-btn {
@@ -149,23 +149,31 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 90%;
     margin: 10px;
 }
 
 .modal-content img {
     height: auto;
-    width: 120px;
+    width: 80px;
+}
+.modal content h3, .modal-content p {
+    font-size: smaller;
 }
 
 .total-content {
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
     text-align: center;
     padding-top: 20px;
 }
 
 .delete-element {
+    cursor: pointer;
+}
+
+
+.sum, .rest {
     cursor: pointer;
 }
 

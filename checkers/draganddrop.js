@@ -93,7 +93,7 @@ function start(){
 // Insertion of pieces
 colors.forEach( color => repeat(12, createPieces, {
     name: color,
-    src: `assets/${color}.svg`
+    src: `${color}.svg`
 }))
 // Board creation
 repeat(8, boardRows);
