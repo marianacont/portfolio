@@ -45,3 +45,74 @@
 .projects h3{
     color: var(--light);
 }
+
+
+/* Projects Gallery */
+.projects-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 3rem;
+}
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+}
+.slide-content{
+    margin: 0 40px;
+}
+
+.card{
+    width: 320px;
+    border-radius: 25px;
+    background-color: var(--first);
+    text-align: center;
+}
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 14px 20px 14px;
+}
+.image-content {
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    width: 320px;
+    border-radius: 25px 25px 0 25px;
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    border-radius: 25px 25px 0 0;
+}
+.project-name {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+.description {
+    color: var(--light);
+    font-size: 0.9rem;
+}
+
+.project-btn {
+    border: none;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    background-color: var(--light);
+    border-radius: .4rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.project-btn:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: rgb(43, 44, 51) 1px 1px 5px;
+}
