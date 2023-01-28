@@ -49,26 +49,34 @@
 
 /* Projects Gallery */
 .projects-slider{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     padding: 3rem;
 }
-.slide-container {
+.slider-container{
+    position: relative;
+}
+
+.gallery {
     max-width: 1120px;
     width: 100%;
+    display: block;
 }
-.slide-content{
-    margin: 0 40px;
-}
+
 
 .card{
     width: 320px;
     border-radius: 25px;
     background-color: var(--first);
     text-align: center;
+    display: none;
+    transition: all .5s ease-out;
 }
+.card.active {
+    display:block;
+    margin: auto;
+}
+
+
 .image-content, .card-content{
     display: flex;
     flex-direction: column;
@@ -115,4 +123,41 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     box-shadow: rgb(43, 44, 51) 1px 1px 5px;
+}
+
+.slider-icon {
+    position: absolute;
+    top: calc(60% - 100px);
+    height: 100px;
+    border: none;
+    background-color: var(--first);
+    color: var(--light);
+    font-size: min(calc(1vh + 1rem), 3rem);
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+}
+.slider-icon:hover, .indicators button:hover{
+    opacity: .7;
+}
+.icon-prev{
+    left: 2%;
+}
+.icon-next{
+    right: 2%;
+}
+
+.indicators{
+    text-align: center;
+    cursor: pointer;
+}
+.indicators button{
+    padding: .3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--first);
+}
+.indicators button.active{
+    padding: .5rem;
+    transition: all .5s ease-in;
 }
