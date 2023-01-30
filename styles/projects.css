@@ -52,7 +52,7 @@
     min-height: 100vh;
     padding: 3rem;
 }
-.slider-container{
+.slide-container{
     position: relative;
 }
 
@@ -64,7 +64,8 @@
 
 
 .card{
-    width: 320px;
+    width: 380px;
+    height: 80vh;
     border-radius: 25px;
     background-color: var(--first);
     text-align: center;
@@ -90,8 +91,8 @@
 .card-image {
     position: relative;
     height: 250px;
-    width: 320px;
-    border-radius: 25px 25px 0 25px;
+    width: 380px;
+    border-radius: 25px 25px 0 0;
 }
 .card-img{
     height: 100%;
@@ -107,6 +108,11 @@
 .description {
     color: var(--light);
     font-size: 0.9rem;
+}
+.i {
+    display: flex;
+    color: var(--light);
+    gap: .3rem;
 }
 
 .project-btn {
