@@ -49,7 +49,6 @@
 
 /* Projects Gallery */
 .projects-slider{
-    min-height: 100vh;
     padding: 3rem;
 }
 .slide-container{
@@ -65,7 +64,6 @@
 
 .card{
     width: 380px;
-    height: 80vh;
     border-radius: 25px;
     background-color: var(--first);
     text-align: center;
