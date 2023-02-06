@@ -153,9 +153,9 @@
 
 .indicators{
     text-align: center;
-    cursor: pointer;
 }
 .indicators button{
+    cursor: pointer;
     padding: .3rem;
     border: none;
     border-radius: 50%;

@@ -21,18 +21,22 @@ navButton.onclick = () => menuList.classList.toggle('active');
         setElement(indicators, 'icon-next')
     })
     )
+    indicators.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            setElement(card, i);
+            setElement(indicators, i)
+        })
+    })
 
 
 // Elimina la clase 'active'
 function getElement (elements){
-    let newItem
-    for (el of elements){
+        for (el of elements){
         if(el.classList.contains('active')){
             el.classList.remove('active');
-            newItem = el
+            return el
         }
     }
-    return newItem
 }
 
 // Permite pasar de un elemento al siguiente, al anterior, al primero o al último, según el nombre de su clase
@@ -44,7 +48,7 @@ function setElement(array, type){
         (el.previousElementSibling || el.parentNode.lastElementChild) :
         type == 'icon-next' ?
         (el.nextElementSibling || el.parentNode.firstElementChild) :
-        (el)
+        (array[type])
         )
         newItem.classList.add('active')
 
