@@ -1,47 +1,127 @@
-/* Projects */
-
-#proj_header{
-    margin: auto;
-    animation: none;
-}
-
-#proj-title {
-    height: 50px;
-}
-
-.projects{
-    width: 80vw;
+/* Projects Gallery */
+.projects-slider{
+    width: 70vw;
     margin: auto;
     text-align: center;
+    padding: 3rem;
+}
+
+@media screen and (min-width:768px) 
+    .project-slider {
+        max-width: 960px;
+}
+
+.slide-container{
+    position: relative;
+}
+
+.gallery {
+    max-width: 1120px;
+    width: 100%;
+    display: block;
+}
+
+
+.card{
+    width: 380px;
+    border-radius: 25px;
+    background-color: var(--first);
+    text-align: center;
+    display: none;
+    transition: all .5s ease-out;
+}
+.card.active {
+    display:block;
+    margin: auto;
+}
+
+
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 14px 20px 14px;
+}
+.image-content {
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    width: 380px;
+    border-radius: 25px 25px 0 0;
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    border-radius: 25px 25px 0 0;
+}
+.project-name {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+.description {
+    color: var(--light);
+    font-size: 0.9rem;
+}
+.i {
+    display: flex;
+    color: var(--light);
+    gap: .3rem;
+}
+
+.project-btn {
+    border: none;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    background-color: var(--light);
+    border-radius: .4rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.project-btn:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: rgb(43, 44, 51) 1px 1px 5px;
+}
+
+.slider-icon {
+    position: absolute;
+    top: calc(60% - 100px);
+    height: 100px;
+    border: none;
     background-color: var(--first);
     color: var(--light);
-    padding: 1rem;
+    font-size: min(calc(1vh + 1rem), 3rem);
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
 }
-.project{
-    margin: 2rem 0;
+.slider-icon:hover, .indicators button:hover{
+    opacity: .7;
 }
-.p-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 400px;
-    width: 100%;
-    height: 100%;
+.icon-prev{
+    left: -50px;
 }
-
-
-.menu-prac ul {
-    display: flex;
-    gap: 2rem;
+.icon-next{
+    right: -50px;
 }
 
-.menu-prac a {
-    text-decoration: none;
-    color: var(--second);
+.indicators{
+    text-align: center;
 }
-.projects h2{
-    color: white;
-    border-bottom: 1px solid white;
+.indicators button{
+    cursor: pointer;
+    padding: .3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--first);
 }
-.projects h3{
-    color: var(--light);
+.indicators button.active{
+    padding: .5rem;
+    transition: all .5s ease-in;
 }
