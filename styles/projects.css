@@ -125,3 +125,10 @@
     padding: .5rem;
     transition: all .5s ease-in;
 }
+
+.small {
+    text-decoration: none;
+    font-size: 0.75rem;
+    margin: 0;
+    padding:0;
+}
