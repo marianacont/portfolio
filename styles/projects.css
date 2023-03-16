@@ -83,7 +83,21 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.project-btn:hover{
+
+.general-btn, .general-btn a:visited{
+    border: none;
+    font-size: 0.6rem;
+    padding: 6px 13px;
+    background-color: var(--first);
+    color: var(--light);
+    border-radius: .4rem;
+    text-decoration: none;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover, .general-btn:hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     box-shadow: rgb(43, 44, 51) 1px 1px 5px;
