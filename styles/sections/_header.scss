@@ -3,20 +3,30 @@
 #header {
     align-items: center;
     justify-content: center;
-    height: 70vh;
+
 
     @include g.breakpoint(medium){
+        height: 60vh;
         h1 {
         margin-bottom: 1rem;
-    }
-    span {
+        }
+        span {
         background-color: g.$rose-quartz;
         display: inline-block;
         height: 1rem;
         width: 10rem;
         margin-left: -2rem;
         margin-bottom: 1rem;
-    }
+        }
+        .bloqueverde {
+        background-color: g.$green;
+        display: inline-block;
+        height: 1rem;
+        width: 10rem;
+        margin-left: 80%;
+        margin-top: 1rem;
+        }
     }
     
 }
+

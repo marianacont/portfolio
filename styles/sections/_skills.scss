@@ -1,5 +1,17 @@
 @use '../globals/' as g;
 
+.separador {
+  @include g.breakpoint(medium){
+    background-image: url(../assets/img/barra.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 80px;
+    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
 .skills {
     text-align: center;
     margin-bottom: 4rem;

@@ -178,9 +178,11 @@ nav {
 #header {
   align-items: center;
   justify-content: center;
-  height: 70vh;
 }
 @media screen and (min-width: 992px) {
+  #header {
+    height: 60vh;
+  }
   #header h1 {
     margin-bottom: 1rem;
   }
@@ -191,6 +193,26 @@ nav {
     width: 10rem;
     margin-left: -2rem;
     margin-bottom: 1rem;
+  }
+  #header .bloqueverde {
+    background-color: rgb(50, 129, 125);
+    display: inline-block;
+    height: 1rem;
+    width: 10rem;
+    margin-left: 80%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .separador {
+    background-image: url(../assets/img/barra.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 80px;
+    margin-bottom: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -308,6 +330,7 @@ nav {
   display: flex;
   color: var(--light);
   gap: 0.3rem;
+  padding: 1rem;
 }
 
 .project-btn {
