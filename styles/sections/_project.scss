@@ -18,7 +18,7 @@
         padding: 0;
 
             .card{
-            width: 380px;
+            width: min(380px, 90vw);
             border-radius: 25px;
             background-color: g.$blue;
             text-align: center;
@@ -33,9 +33,6 @@
     }
 }
 
-
-
-
 .image-content, .card-content{
     display: flex;
     flex-direction: column;
@@ -49,7 +46,7 @@
 .card-image {
     position: relative;
     height: 250px;
-    width: 380px;
+    width: min(380px, 90vw);
     border-radius: 25px 25px 0 0;
 }
 .card-img{
