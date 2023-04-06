@@ -3,6 +3,7 @@
 #header {
     align-items: center;
     justify-content: center;
+    height: 70vh;
 
     @include g.breakpoint(medium){
         h1 {

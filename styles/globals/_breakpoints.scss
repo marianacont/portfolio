@@ -16,6 +16,6 @@ $breakpoints-up: (
     width: min(100% - 50px, 600px);
     margin: auto;
     @include breakpoint(medium){
-        width: min(100% - 100px, 1120px);
+        width: min(100% - 240px, 1120px);
     }
 }
