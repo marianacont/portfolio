@@ -1,0 +1,152 @@
+@use '../globals/' as g;
+
+/* Projects Gallery */
+.projects-slider{
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+
+    @media screen and (min-width:768px) {
+        max-width: 960px;
+    }
+
+}
+
+
+.slide-container{
+    position: relative;
+}
+
+.gallery {
+    max-width: 1120px;
+    width: 100%;
+    display: block;
+}
+
+
+.card{
+    width: 380px;
+    border-radius: 25px;
+    background-color: g.$blue;
+    text-align: center;
+    display: none;
+    transition: all .5s ease-out;
+}
+.card.active {
+    display:block;
+    margin: auto;
+}
+
+
+.image-content, .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 14px 20px 14px;
+}
+.image-content {
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    width: 380px;
+    border-radius: 25px 25px 0 0;
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    border-radius: 25px 25px 0 0;
+}
+.project-name {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+.description {
+    color: var(--light);
+    font-size: 0.9rem;
+}
+.i {
+    display: flex;
+    color: var(--light);
+    gap: .3rem;
+}
+
+.project-btn {
+    border: none;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    background-color: var(--light);
+    border-radius: .4rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.general-btn, .general-btn a:visited{
+    border: none;
+    font-size: 1rem;
+    padding: 6px 13px;
+    background-color: g.$blue;
+    color: var(--light);
+    border-radius: .4rem;
+    text-decoration: none;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.project-btn:hover, .general-btn:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: rgb(43, 44, 51) 1px 1px 5px;
+}
+
+.slider-icon {
+    position: absolute;
+    top: calc(60% - 100px);
+    height: 100px;
+    border: none;
+    background-color: var(--first);
+    color: var(--light);
+    font-size: min(calc(1vh + 1rem), 3rem);
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: all .3s ease-in-out;
+}
+.slider-icon:hover, .indicators button:hover{
+    opacity: .7;
+}
+.icon-prev{
+    left: -50px;
+}
+.icon-next{
+    right: -50px;
+}
+
+.indicators{
+    text-align: center;
+}
+.indicators button{
+    cursor: pointer;
+    padding: .3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--first);
+}
+.indicators button.active{
+    padding: .5rem;
+    transition: all .5s ease-in;
+}
+
+.small {
+    text-decoration: none;
+    font-size: 0.75rem;
+    margin: 0;
+    padding:0;
+}

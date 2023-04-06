@@ -1,0 +1,22 @@
+@use '../globals/' as g;
+
+#header {
+    height: calc(100vh - 30rem);
+    align-items: center;
+    justify-content: center;
+
+    @include g.breakpoint(medium){
+        h1 {
+        margin-bottom: 1rem;
+    }
+    span {
+        background-color: g.$rose-quartz;
+        display: inline-block;
+        height: 1rem;
+        width: 10rem;
+        margin-left: -2rem;
+        margin-bottom: 1rem;
+    }
+    }
+    
+}

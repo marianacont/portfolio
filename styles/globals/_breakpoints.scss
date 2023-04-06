@@ -1,0 +1,21 @@
+// 576 - 768 - 992 -1200 - 1400
+$breakpoints-up: (
+    'small': '768px',
+    'medium': '992px',
+    'large': '1200px',
+    'xlarge': '1400px',
+)!default;
+
+@mixin breakpoint($size) {
+    @media screen and (min-width: map-get($breakpoints-up, $size)) {
+         @content;
+    }
+};
+
+.responsive {
+    width: min(100% - 50px, 600px);
+    margin: auto;
+    @include breakpoint(medium){
+        width: min(100% - 100px, 1120px);
+    }
+}

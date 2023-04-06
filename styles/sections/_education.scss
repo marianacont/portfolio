@@ -1,0 +1,25 @@
+@use '../globals/' as g;
+
+.education {
+    text-align: center;
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .logos{
+    height: 2rem;
+    }
+
+    .tarjeta {
+        border: solid .25rem g.$blue;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        color: g.$yinmn-blue;
+        width: min(50%, 420px);
+        display: flex;
+        flex-direction:column;
+        gap: 1rem;
+    }
+}
+

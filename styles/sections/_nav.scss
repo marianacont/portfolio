@@ -1,0 +1,110 @@
+@use '../globals/' as g;
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top:0;
+    bottom: 0;
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: g.$blue solid 2px;
+    z-index: 1;
+    background-color: g.$white;
+    width: 100vw;
+
+    li a {
+    color: g.$white;
+    }
+
+    /* Menu */
+    .menu {
+    height: 25vh;
+    position: fixed;
+    right: -100%;
+    bottom: 0;
+    overflow: hidden;
+    margin: 0;
+
+        a{
+            color: g.$antique-white;
+            font-weight: 800;
+            }
+        a:hover{
+            font-weight: 600;
+            }
+    }
+
+    .menu.active {
+        right: 0;
+        width: 100vw;
+        background-color: g.$blue;
+        display: grid;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+
+    /* Button */
+
+    .btn {
+        position: relative;
+        z-index: 1;
+        color: g.$white;
+        background-color: g.$blue;
+        border: 0;
+        border-radius: .2rem;
+        margin: 0.5rem 1rem;
+        font-size: 1.4rem;
+        width: 38px;
+    }
+    .btn:active{
+        background-color: transparent;
+    }
+    .menu-open::before {
+        content: '\2630';
+    }
+    
+    .menu-close::before {
+        content: '|';
+    }
+
+    // Breakpoints
+    @include g.breakpoint(small) {
+        border-top: none;
+        border-bottom: g.$blue solid 2px;
+        height: 60px;
+        .menu.active {
+                top: 0;
+                bottom: auto;
+            }
+        
+    }
+    @include g.breakpoint(medium) {
+        .btn.menu-open {
+            display: none;
+        }
+        
+        .menu, 
+        .menu.active {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            top: 0;
+            left:0;
+            padding-right: 2rem;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.3rem;
+            background-color: transparent;
+            position: relative;
+            .enlaces {
+                color: g.$blue;
+            }
+        }
+    }
+    @include g.breakpoint(large) {
+        padding: .5rem calc(50vw - 660px);
+        width: auto;
+    }
+}
