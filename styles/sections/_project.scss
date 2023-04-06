@@ -2,48 +2,45 @@
 
 /* Projects Gallery */
 .projects-slider{
-    width: 70vw;
-    margin: auto;
     text-align: center;
-    padding: 3rem;
 
-    @media screen and (min-width:768px) {
-        max-width: 960px;
+    // @media screen and (min-width:768px) {
+    //     max-width: 960px;
+    // }
+    
+    .slide-container{
+        position: relative;
+
+        .gallery {
+        max-width: 1120px;
+        width: 100%;
+        display: block;
+        padding: 0;
+
+            .card{
+            width: 380px;
+            border-radius: 25px;
+            background-color: g.$blue;
+            text-align: center;
+            display: none;
+            transition: all .5s ease-out;
+            }
+            .card.active {
+            display:block;
+            margin: auto;
+            }
+        }
     }
-
 }
 
 
-.slide-container{
-    position: relative;
-}
-
-.gallery {
-    max-width: 1120px;
-    width: 100%;
-    display: block;
-}
-
-
-.card{
-    width: 380px;
-    border-radius: 25px;
-    background-color: g.$blue;
-    text-align: center;
-    display: none;
-    transition: all .5s ease-out;
-}
-.card.active {
-    display:block;
-    margin: auto;
-}
 
 
 .image-content, .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 14px 20px 14px;
+    padding: 20px 14px;
 }
 .image-content {
     position: relative;
@@ -59,7 +56,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    
     border-radius: 25px 25px 0 0;
 }
 .project-name {
@@ -123,10 +119,10 @@
     opacity: .7;
 }
 .icon-prev{
-    left: -50px;
+    left: 0;
 }
 .icon-next{
-    right: -50px;
+    right: 0;
 }
 
 .indicators{
