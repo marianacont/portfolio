@@ -170,7 +170,6 @@ nav {
   }
 }
 #header {
-  height: calc(100vh - 30rem);
   align-items: center;
   justify-content: center;
 }
