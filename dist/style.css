@@ -426,7 +426,7 @@ nav {
   border-radius: 1rem;
   padding: 0.5rem;
   color: rgb(62, 81, 122);
-  width: min(70%, 420px);
+  width: min(80%, 420px);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
