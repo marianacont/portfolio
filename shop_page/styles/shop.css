@@ -103,7 +103,7 @@ h1 {
 /* Modal */
 
 .modal-container {
-    width: 600px;
+    
     background-color: #334;
     right: 0;
     max-height: 88vh;
@@ -113,7 +113,6 @@ h1 {
     align-items: center;
     position: fixed;
     overflow: auto;
-    z-index: 2;
     top: 10vh;
     scrollbar-color: none;
     animation: swipeLeft .26s ease;
@@ -146,11 +145,18 @@ h1 {
 
 .modal-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    gap: 1rem;
     width: 90%;
     margin: 10px;
+}
+
+.modal-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
 }
 
 .modal-content img {

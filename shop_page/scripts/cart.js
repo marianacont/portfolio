@@ -25,12 +25,14 @@ const shopCart = () => {
         cartContent.className = 'modal-content';
         cartContent.innerHTML = `
         <img src=${product.img}>
-        <h3>${product.id}</h3>
-        <p>$${product.price}</p>
-        <span class="rest"> - </span>
-        <p>${product.lot}</p>
-        <span class="sum"> + </span>
-        <p>Total: ${product.lot * product.price}</p>`
+        <div class="modal-info">
+            <h3>${product.id}</h3>
+            <p>$${product.price}</p>
+            <span class="rest"> - </span>
+            <p>${product.lot}</p>
+            <span class="sum"> + </span>
+            <p>Total: ${product.lot * product.price}</p>
+        </div>`
 
         modalContainer.append(cartContent);
 
