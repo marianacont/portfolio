@@ -123,6 +123,11 @@ li {
   list-style: none;
 }
 
+img,
+picture {
+  max-width: 100%;
+}
+
 .responsive {
   width: min(100% - 50px, 600px);
   margin: auto;
@@ -175,6 +180,14 @@ nav {
     grid-template-areas: "nav" "header" "main" "footer";
   }
 }
+/* Sistema de Grillas responsive 
+    Por cada viwport name (cm, md, etc.), por cada viewport width y por cada viewport max en la variable @media, creá lo siguiente: Creá una media querie con la clase container y container-$vn*/
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
 #header {
   align-items: center;
   justify-content: center;
@@ -220,6 +233,9 @@ nav {
   text-align: center;
   margin-bottom: 4rem;
 }
+.skills h2 {
+  color: rgb(176, 142, 162);
+}
 .skills div {
   display: flex;
   flex-direction: column;
@@ -264,82 +280,48 @@ nav {
     text-shadow: 0.1rem 0.1rem 0.3rem var(--second);
   }
 }
-/* Projects Gallery */
-.projects-slider {
+.projects {
+  margin: 6rem auto;
+}
+.projects h2 {
   text-align: center;
 }
-.projects-slider .slide-container {
-  position: relative;
-}
-.projects-slider .slide-container .gallery {
-  max-width: 1120px;
-  width: 100%;
-  display: block;
-  padding: 0;
-}
-.projects-slider .slide-container .gallery .card {
-  width: min(380px, 90vw);
+
+.card {
   border-radius: 25px;
   background-color: rgb(0, 76, 121);
-  text-align: center;
-  display: none;
   transition: all 0.5s ease-out;
-}
-.projects-slider .slide-container .gallery .card.active {
-  display: block;
-  margin: auto;
-}
-
-.image-content, .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 14px;
-}
-
-.image-content {
-  position: relative;
+  overflow: hidden;
+  color: rgb(241, 247, 248);
 }
 
 .card-image {
-  position: relative;
-  height: 250px;
-  width: min(380px, 90vw);
-  border-radius: 25px 25px 0 0;
-}
-
-.card-img {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1.5/1;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 25px 25px 0 0;
+}
+
+.card-content {
+  padding: 20px 14px;
+  text-align: center;
 }
 
 .project-name {
-  color: var(--light);
+  color: rgb(255, 238, 219);
   font-size: 1.2rem;
 }
 
-.description {
-  color: var(--light);
-  font-size: 0.9rem;
-}
-
 .i {
-  display: flex;
-  color: var(--light);
-  gap: 0.3rem;
-  padding: 1rem;
+  padding-block: 1rem;
 }
 
 .project-btn {
   border: none;
   font-size: 0.8rem;
-  padding: 8px 16px;
-  background-color: var(--light);
+  padding: 0.5rem;
+  background-color: rgb(255, 238, 219);
   border-radius: 0.4rem;
-  margin: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -363,55 +345,7 @@ nav {
   box-shadow: rgb(43, 44, 51) 1px 1px 5px;
 }
 
-.slider-icon {
-  position: absolute;
-  top: calc(60% - 100px);
-  height: 100px;
-  border: none;
-  background-color: var(--first);
-  color: var(--light);
-  font-size: min(1vh + 1rem, 3rem);
-  cursor: pointer;
-  border-radius: 0.4rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.slider-icon:hover, .indicators button:hover {
-  opacity: 0.7;
-}
-
-.icon-prev {
-  left: 0;
-}
-
-.icon-next {
-  right: 0;
-}
-
-.indicators {
-  text-align: center;
-}
-
-.indicators button {
-  cursor: pointer;
-  padding: 0.3rem;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--first);
-}
-
-.indicators button.active {
-  padding: 0.5rem;
-  transition: all 0.5s ease-in;
-}
-
-.small {
-  text-decoration: none;
-  font-size: 0.75rem;
-  margin: 0;
-  padding: 0;
-}
-
+/* Projects Gallery */
 .education {
   text-align: center;
 }

@@ -1,0 +1,39 @@
+// Variables: Valores que se almacenan y pueden cambiar
+
+    $position: static, relative, absolute, sticky, fixed;
+    $p_type: top, left, right, bottom;
+   
+    $attributes:
+        text        color,
+        bg          background-color,
+        border      border-color,
+        outline     outline-color,
+        shade       --shade,
+        shadow      --shadow,
+        deco        text-decoration-color;
+    // Tamaños 
+    $col: 24;
+    $media: 
+        sm    576px   540px,
+        md    768px   720px,
+        lg    992px   960px,
+        xl   1200px  1140px,
+        xxl  1400px  1320px;
+
+
+/* Sistema de Grillas responsive 
+    Por cada viwport name (cm, md, etc.), por cada viewport width y por cada viewport max en la variable @media, creá lo siguiente: Creá una media querie con la clase container y container-$vn*/
+// @each $vn, $vw, $vmax in $media{
+//     @media screen and (min-width: $vw){
+//         .container, .container-#{$vn}{ max-width: $vmax; }
+//     @for $i from 1 through $col{
+//         .col-#{$vn}-#{$i}{ width: calc($i/$col); }
+//     } } }
+
+.grid{
+    display: grid;
+    gap:1rem;
+    // grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    // grid-template-columns: 1fr 1fr 1fr;
+}

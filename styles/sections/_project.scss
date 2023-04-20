@@ -1,82 +1,49 @@
 @use '../globals/' as g;
 
-/* Projects Gallery */
-.projects-slider{
-    text-align: center;
-
-    // @media screen and (min-width:768px) {
-    //     max-width: 960px;
-    // }
-    
-    .slide-container{
-        position: relative;
-
-        .gallery {
-        max-width: 1120px;
-        width: 100%;
-        display: block;
-        padding: 0;
-
-            .card{
-            width: min(380px, 90vw);
-            border-radius: 25px;
-            background-color: g.$blue;
-            text-align: center;
-            display: none;
-            transition: all .5s ease-out;
-            }
-            .card.active {
-            display:block;
-            margin: auto;
-            }
-        }
+.projects {
+    margin: 6rem auto;
+    h2 {
+        text-align: center;
     }
 }
 
-.image-content, .card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 14px;
-}
-.image-content {
-    position: relative;
+.card {
+    border-radius: 25px;
+    background-color: g.$blue;
+    transition: all .5s ease-out;
+    overflow: hidden;
+    color: g.$white;
 }
 
 .card-image {
-    position: relative;
-    height: 250px;
-    width: min(380px, 90vw);
-    border-radius: 25px 25px 0 0;
-}
-.card-img{
-    height: 100%;
+    // width 100% abarca el 100% de su contenedor. aspect ratio permite definir la relación alto y ancho, ej 1/1 es cuadrado. Object-fit: cover, cubre el espacio sin deformar la imagen.
     width: 100%;
+    aspect-ratio: 1.5 / 1;
     object-fit: cover;
-    border-radius: 25px 25px 0 0;
 }
+
+.card-content {
+    padding: 20px 14px;
+    text-align: center;
+}
+
+
 .project-name {
-    color: var(--light);
+    color: g.$antique-white;
     font-size: 1.2rem;
 }
-.description {
-    color: var(--light);
-    font-size: 0.9rem;
-}
+
+
 .i {
-    display: flex;
-    color: var(--light);
-    gap: .3rem;
-    padding: 1rem;
+    padding-block: 1rem;
 }
 
 .project-btn {
     border: none;
     font-size: 0.8rem;
-    padding: 8px 16px;
-    background-color: var(--light);
+    padding: .5rem;
+    background-color: g.$antique-white;
     border-radius: .4rem;
-    margin: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -101,46 +68,79 @@
     box-shadow: rgb(43, 44, 51) 1px 1px 5px;
 }
 
-.slider-icon {
-    position: absolute;
-    top: calc(60% - 100px);
-    height: 100px;
-    border: none;
-    background-color: var(--first);
-    color: var(--light);
-    font-size: min(calc(1vh + 1rem), 3rem);
-    cursor: pointer;
-    border-radius: .4rem;
-    transition: all .3s ease-in-out;
-}
-.slider-icon:hover, .indicators button:hover{
-    opacity: .7;
-}
-.icon-prev{
-    left: 0;
-}
-.icon-next{
-    right: 0;
-}
+// .slider-icon {
+//     position: absolute;
+//     top: calc(60% - 100px);
+//     height: 100px;
+//     border: none;
+//     background-color: var(--first);
+//     color: var(--light);
+//     font-size: min(calc(1vh + 1rem), 3rem);
+//     cursor: pointer;
+//     border-radius: .4rem;
+//     transition: all .3s ease-in-out;
+// }
+// .slider-icon:hover, .indicators button:hover{
+//     opacity: .7;
+// }
+// .icon-prev{
+//     left: 0;
+// }
+// .icon-next{
+//     right: 0;
+// }
 
-.indicators{
-    text-align: center;
-}
-.indicators button{
-    cursor: pointer;
-    padding: .3rem;
-    border: none;
-    border-radius: 50%;
-    background-color: var(--first);
-}
-.indicators button.active{
-    padding: .5rem;
-    transition: all .5s ease-in;
-}
+// .indicators{
+//     text-align: center;
+// }
+// .indicators button{
+//     cursor: pointer;
+//     padding: .3rem;
+//     border: none;
+//     border-radius: 50%;
+//     background-color: var(--first);
+// }
+// .indicators button.active{
+//     padding: .5rem;
+//     transition: all .5s ease-in;
+// }
 
-.small {
-    text-decoration: none;
-    font-size: 0.75rem;
-    margin: 0;
-    padding:0;
-}
+// .small {
+//     text-decoration: none;
+//     font-size: 0.75rem;
+//     margin: 0;
+//     padding:0;
+// }
+
+/* Projects Gallery */
+// .projects-slider{
+//     text-align: center;
+
+//     // @media screen and (min-width:768px) {
+//     //     max-width: 960px;
+//     // }
+    
+//     .slide-container{
+//         position: relative;
+
+//         .gallery {
+//         max-width: 1120px;
+//         width: 100%;
+//         display: block;
+//         padding: 0;
+
+//             .card{
+//             width: min(380px, 90vw);
+//             border-radius: 25px;
+//             background-color: g.$blue;
+//             text-align: center;
+//             display: none;
+//             transition: all .5s ease-out;
+//             }
+//             .card.active {
+//             display:block;
+//             margin: auto;
+//             }
+//         }
+//     }
+// }

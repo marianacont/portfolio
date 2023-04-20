@@ -87,3 +87,9 @@ fieldset {
   li {
     list-style: none;
   }
+
+  img,
+  picture {
+    // evita que las imagenes aparezcan muy grandes
+    max-width: 100%;
+  }

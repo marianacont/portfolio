@@ -4,7 +4,7 @@ const showHiddenPass = (inputPass, inputIcon) =>{
         iconEye = document.getElementById(inputIcon);
 
     iconEye.addEventListener('click', () =>{
-        // Change password yo text
+        // Change password to text
         if(input.type === 'password'){
             // switch to text
             input.type = 'text'
@@ -21,7 +21,7 @@ const showHiddenPass = (inputPass, inputIcon) =>{
     })
 }
 
-showHiddenPass('input-pass', 'input-eye')
+showHiddenPass('input-pass', 'input-eye');
 
 
 
@@ -31,6 +31,8 @@ const form = document.querySelector('#form'),
         pass = document.getElementById('input-pass'),
         button = document.getElementById('login-btn');
 
+const regMail = /[.-_\w]+@([\w-]+\.)+[\w-]+/g;
+const regPassLook = /^(?=.+[A-z])(?=.+\d)(?=.+[$@!¡_*¿?&]){8,16}$/g
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -38,7 +40,19 @@ button.addEventListener('click', (e) => {
         user: user.value,
         pass: pass.value
     }
-    console.log(data);
+
+
+    if(regMail.test(user.value)){
+        console.log('válido')
+    }else{
+        console.log('mail no válido')
+    }
+    if(regPassLook.test(pass.value)){
+        console.log('válida')
+    }else{
+        console.log('contraseña no válidoa')
+    }
+
     if(user.value === 'user@host.com' & pass.value === '12345'){
         alert("Welcome back, User!")
     }else {
