@@ -70,9 +70,9 @@ img{
 
 .login-form{
     position: relative;
-    width: clamp(min(70vw,350px), 50vw, 800px);
+    width: clamp(min(90vw,350px), 50vw, 800px);
     padding: 2rem;
-    margin: auto;
+    margin: 2rem auto;
     background-color: hsla(55, 41%, 97%, 0.5);
     border: 2px solid hsla(244, 16%, 92%, .5);
     border-radius: .5rem;
@@ -214,6 +214,9 @@ login-input:valid {
     font-weight: 700;
     color: var(--login-first);
     text-decoration: none;
+}
+.login-form .text-small {
+    font-size: var(--login-smaller-font);
 }
 
 
