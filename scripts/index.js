@@ -53,31 +53,3 @@ function setElement(array, type){
         newItem.classList.add('active')
 
 }
-
-
-
-
-// function getElement(array){
-//     let newItem
-//     for(el in array){
-//         if(el.classList.contains(className)){
-//             el.classList.remove(className)
-//             newItem = el;
-//         }
-//     }
-//     return newItem
-// }
-
-// function setElement(array, type){
-//     let el = getElement(array);
-//     let newItem =(
-//         type == "gallery-prev" ?
-//     (el.previusElementSibling || el.parentNode.lastElementChild) :
-//     type == "gallery-next" ?
-//     (el.previusElementSibling || el.parentNode.lastElementChild) :
-//     (el)
-//     )
-//     newItem.classList.add(className)
-// }
-
-// // Carrousel
